@@ -63,6 +63,7 @@ $(window).resize(function () {
 })
 //리사이징시 특정 요소 보이지 않게 설정 끝
 
+//스크롤 네비바 이벤트
 $(window).scroll(function(){
     var scrollH = window.scrollY;
     if(scrollH != 0){
@@ -73,7 +74,8 @@ $(window).scroll(function(){
         $('.navbar').removeClass('bg-yellow');
     }
 })
-//리사이징시 특정 요소 보이지 않게 설정 끝
+
+//스크롤 네비바 이벤트 끝
 
 //경력 탭 스크롤 이벤트
 $(window).scroll(function() {
