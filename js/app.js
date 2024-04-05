@@ -109,6 +109,9 @@ $(document).ready(function () {
     $("#contact-form").on("submit", function (event) {
         event.preventDefault();
 
+        // Show "메일 전송 중..." message
+        $("#submitMessage").text("메일 전송 중...");
+
         // formData 넣어주고
         const formData = new FormData(this);
 
@@ -127,9 +130,11 @@ $(document).ready(function () {
             .done(function () {
                 alert('성공');
                 $("#contact-form")[0].reset();
+                $("#submitMessage").text(""); // Clear the message
             })
             .fail(function (error) {
                 alert("실패.. " + JSON.stringify(error));
+                $("#submitMessage").text(""); // Clear the message
             });
     });
 });

@@ -50,7 +50,7 @@
                             <div class="row gx-5 justify-content-center">
                                 <div class="col-lg-8 col-xl-6">
 
-                                    <form id="contact-form" >
+                                    <form id="contact-form">
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="name" name="name" type="text" placeholder="이름..." required />
                                             <label for="name">이름</label>
@@ -67,7 +67,11 @@
                                             <textarea class="form-control" id="message" name="message" type="text" placeholder="할말..." style="height: 10rem" required></textarea>
                                             <label for="message">남길 메세지</label>
                                         </div>
-                                        <div class="d-grid"><button class="btn btn-primary btn-lg " id="submitButton" name="submit" type="submit">제출</button></div>
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary btn-lg " id="submitButton" name="submit" type="submit">제출</button>
+                                        </div>
+                                        <!-- Submit message -->
+                                        <div id="submitMessage" class="mt-2 text-muted"></div>
                                     </form>
                                 </div>
                             </div>
