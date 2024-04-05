@@ -126,12 +126,15 @@ $(document).ready(function () {
         })
             .done(function () {
                 alert('성공');
+                $("#contact-form")[0].reset();
             })
             .fail(function (error) {
-                alert("Oops... " + JSON.stringify(error));
+                alert("실패.. " + JSON.stringify(error));
             });
     });
 });
+
+
 
 
 
