@@ -52,7 +52,7 @@
 
                                     <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                                         <!-- Name input-->
-                                        <div class="form-floating mb-3">
+                                        <div id="contact-form" class="form-floating mb-3">
                                             <input class="form-control" id="name" type="text" placeholder="이름..." data-sb-validations="required" />
                                             <label for="name">이름</label>
                                             <div class="invalid-feedback" data-sb-feedback="name:required">이름을 적어주세요.</div>
@@ -82,7 +82,7 @@
                                         <!-- has successfully submitted-->
                                         <div class="d-none" id="submitSuccessMessage">
                                             <div class="text-center mb-3">
-                                                <div class="fw-bolder">실제로 제출되지는 않습니다.</div>
+                                                <div class="fw-bolder">제출 완료</div>
                                             </div>
                                         </div>
                                         <!-- Submit error message-->
@@ -91,7 +91,7 @@
                                         <!-- an error submitting the form-->
                                         <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">메세지를 보내는데 오류가 발생했습니다.</div></div>
                                         <!-- Submit Button-->
-                                        <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">제출</button></div>
+                                        <div class="d-grid"><button class="btn btn-primary btn-lg disabled btn-outline-success" id="submitButton" type="submit">제출</button></div>
                                     </form>
                                 </div>
                             </div>

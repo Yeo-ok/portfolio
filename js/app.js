@@ -104,4 +104,32 @@ $(window).scroll(function() {
 })
 //경력 탭 스크롤 이벤트 끝
 
+$(document).ready(function (){
+    $("#contact-form").on("sumbit", function (event){
+        event.preventDefault();
+
+        const formData = new FormData(this);
+
+        formData.append('service_id', 'gmail');
+        formData.append('template_id', 'template_vjryupg');
+        formData.append('user_id', 'z0l1OEjMzeMtGW0qG');
+
+        $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+            type: "post",
+            data: formData,
+            contentType: false,
+            processData: false,
+        })
+            .done(function(){
+                alert('성공');
+            })
+            .fail(function (error){
+                alert("실패" + JSON.stringify(error));
+            });
+    });
+});
+
+
+
+
 
